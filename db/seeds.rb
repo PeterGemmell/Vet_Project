@@ -94,7 +94,7 @@ charlie = Pet.new({
 
       noodles.save()
 
-
+      charlie.vet()
 
       binding.pry
       nil

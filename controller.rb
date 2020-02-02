@@ -15,3 +15,8 @@ get '/pets' do
   @pets = Pet.all()
   erb(:pets)
 end
+
+get '/vets' do
+  @vets = Vet.all()
+  erb(:vets)
+end 

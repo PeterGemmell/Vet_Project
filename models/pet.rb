@@ -70,5 +70,12 @@ def delete()
   SqlRunner.run(sql, values)
 end
 
+def vet()
+  sql = "SELECT * FROM vets WHERE id = $1"
+  values = [@vet_id]
+  vet = SqlRunner.run(sql, values)[0]
+  return Vet.new(vet)
+end 
+
 
 end
