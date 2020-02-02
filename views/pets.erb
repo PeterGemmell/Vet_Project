@@ -1,0 +1,10 @@
+<h2>Booked in Pets</h2>
+
+<% for pet in @pets %>
+
+<p>Animal name: <%= pet.random_name() %></p>
+<p>Age: <%= pet.age %></p>
+<p>Type: <%= pet.animal_type() %></p>
+<p>Owner name: <%= pet.full_name() %></p> 
+<br>
+<% end %>

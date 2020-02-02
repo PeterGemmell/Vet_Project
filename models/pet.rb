@@ -28,6 +28,15 @@ class Pet
    @id = SqlRunner.run(sql, values)[0]['id'].to_i
  end
 
+
+ def random_name
+   return @pet_name
+ end
+
+def full_name
+  return @owner_first_name + " " + @owner_last_name #edit to names on seperate lines if this causes issues later on.
+end                                                 #remember to also fix this on the pets.erb view.
+
 #READ
 def self.all()
 sql = "SELECT * FROM pets"
