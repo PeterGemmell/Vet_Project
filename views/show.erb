@@ -1,0 +1,22 @@
+
+<p>Pet Name: <%=@pet.pet_name %> </p>
+<p>Age: <%=@pet.age %> </p>
+<p>Type: <%=@pet.animal_type %> </p>
+<p>Owner First Name: <%=@pet.owner_first_name %> </p>
+<p>Owner Last Name: <%=@pet.owner_last_name %> </p>
+<p>Owner Number: <%=@pet.owner_contact_number %> </p>
+<p>Treatment Notes: <%=@pet.treatment_notes %> </p>
+<p>Vet assigned: <%=@pet.vet().name %></p>
+
+<form method='post' action="/pets/<%=@pet.id%>/delete">
+  <label for="delete-entry">Delete Entry:</label>
+  <input id="delete" type="submit" name="delete" value="Delete Entry">
+</form>
+
+<br>
+
+<form method='get' action="/pets/<%=@pet.id%>/edit">
+  <label for="edit-entry">Edit Entry:</label>
+  <input id="edit" type="submit" name="edit" value="Edit Entry">
+
+</form>
