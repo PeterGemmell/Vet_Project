@@ -19,4 +19,14 @@ end
 get '/vets' do
   @vets = Vet.all()
   erb(:vets)
-end 
+end
+
+get '/pets/new' do
+  erb(:new)
+end
+
+post '/pets' do
+  @pet = Pet.new(params)
+  @pet.save()
+  erb(:created) 
+end

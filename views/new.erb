@@ -1,0 +1,40 @@
+<% vets = Vet.all()%>
+<form action="/pets" method="POST">
+  <fieldset>
+    <label for="pet_name">Pet Name</label>
+    <input type="text" name="pet_name">
+  </fieldset>
+  <fieldset>
+    <label for="age">Age</label>
+    <input type="text" name="age">
+  </fieldset>
+  <fieldset>
+    <label for="animal_type">Animal Type</label>
+    <input type="text" name="animal_type">
+  </fieldset>
+  <fieldset>
+    <label for="owner_first_name">Owner First Name</label>
+    <input type="text" name="owner_first_name">
+  </fieldset>
+  <fieldset>
+    <label for="owner_last_name">Owner Last Name</label>
+    <input type="text" name="owner_last_name">
+  </fieldset>
+  <fieldset>
+    <label for="owner_contact_number">Owner Contact Number</label>
+    <input type="text" name="owner_contact_number">
+  </fieldset>
+  <fieldset>
+    <label for="treatment_notes">Treatment Notes</label>
+    <input type="text" name="treatment_notes">
+  </fieldset>
+  <fieldset>
+    <label for="vet_id">Vet</label>
+    <select name="vet_id">
+      <% for vet in vets %>
+      <option value="<%=vet.id %>"><%=vet.name %></option>
+      <% end %>
+    </select>
+  </fieldset>
+  <input type="submit" value="SAVE">
+</form>

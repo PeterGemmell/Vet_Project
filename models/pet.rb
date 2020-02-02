@@ -70,12 +70,14 @@ def delete()
   SqlRunner.run(sql, values)
 end
 
+# VET function created allowing us to reference and assign the choosen vet name to currently
+# booked in pets in pets.erb
 def vet()
   sql = "SELECT * FROM vets WHERE id = $1"
   values = [@vet_id]
   vet = SqlRunner.run(sql, values)[0]
   return Vet.new(vet)
-end 
+end
 
 
 end
