@@ -72,7 +72,7 @@ charlie = Pet.new({
       'animal_type' => 'Fox',
       'owner_first_name' => 'Jim',
       'owner_last_name' => 'Stevens',
-      'owner_contact_number' => '07896429861', 
+      'owner_contact_number' => '07896429861',
       'treatment_notes' => 'Not so bushy tail',
       'vet_id' => doctor3.id
 

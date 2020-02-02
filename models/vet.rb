@@ -41,7 +41,7 @@ def update()
   SqlRunner.run(sql, values)
 end
 
-#DELETE 
+#DELETE
 def delete()
   sql = "DELETE FROM vets
   WHERE id = $1"
