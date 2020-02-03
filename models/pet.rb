@@ -79,6 +79,7 @@ end
 
 # VET function created allowing us to reference and assign the choosen vet name to currently
 # booked in pets in pets.erb
+
 def vet()
   sql = "SELECT * FROM vets WHERE id = $1"
   values = [@vet_id]

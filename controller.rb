@@ -15,6 +15,10 @@ also_reload('./models/*')
 #   erb(:index)
 # end
 
+get '/home' do
+  erb(:home)
+end 
+
 get '/pets' do
   @pets = Pet.all()
   erb(:pets)
