@@ -17,7 +17,7 @@ also_reload('./models/*')
 
 get '/home' do
   erb(:home)
-end 
+end
 
 get '/pets' do
   @pets = Pet.all()
@@ -48,6 +48,7 @@ end
 get '/pets/:id/edit' do
   pet_id = params[:id]
   @pet = Pet.find_by_id(pet_id)
+  @vets = Vet.all() #remove back out vets.
   erb(:edit)
 end
 

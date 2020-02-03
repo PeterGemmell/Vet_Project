@@ -22,8 +22,19 @@
   <label for="treatment-notes">Treatment Notes:</label>
   <input id="treatment-notes" type="text" name="treatment_notes" value="<%= @pet.treatment_notes %>"/>
 
-  <label for="vet-id">Edit Vet:</label>
-  <input id="vet-id" type="text" name="vet_id" value="<%=@pet.vet_id %>"/>
-  <input type="submit" value="Update Details">
+  <label>Edit Vet:
+      <select name="vet_id" >
+        <% for vet in @vets %>
+          <% if @pet.vet_id == vet.id %>
+            <option value="<%=vet.id%>" selected><%= vet.name %></option>
+        <% else %>
+            <option value="<%=vet.id%>"><%= vet.name %></option>
+          <% end %>
+        <% end %>
+      </select>
+    </label>
+
+    <input type="submit" value="Update Details">
+
 
 </form>
