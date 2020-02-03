@@ -2,6 +2,11 @@ require('pry')
 require_relative('../models/pet')
 require_relative('../models/vet')
 
+Vet.delete_all()
+Pet.delete_all()
+
+# Pet.delete()
+
 
 # Create Practising Vets
 doctor1 = Vet.new({

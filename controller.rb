@@ -6,11 +6,14 @@ require_relative('./models/vet.rb')
 also_reload('./models/*')
 
 
+# get '/pets' do
+#   @pets = Pet.all()
+#   erb(:index)
+# end
 
-get '/' do
-  erb(:index)
-end
-
+# get '/pets/' do
+#   erb(:index)
+# end
 
 get '/pets' do
   @pets = Pet.all()
@@ -28,7 +31,7 @@ end
 
 get '/pets/:id' do
   pet_id = params[:id]
-  @pet = Pet.find(pet_id)
+  @pet = Pet.find_by_id(pet_id) #change back to just id if worse.
   erb(:show)
 end
 
@@ -40,13 +43,13 @@ end
 
 get '/pets/:id/edit' do
   pet_id = params[:id]
-  @pet = Pet.find(pet_id)
+  @pet = Pet.id(pet_id)
   erb(:edit)
 end
 
 post '/pets/:id/delete' do
   pet_id = params[:id]
-  @pet = Pet.find(pet_id)
+  @pet = Pet.id(pet_id)
   @pet.delete
   erb(:delete)
 end

@@ -30,7 +30,7 @@
   </fieldset>
   <fieldset>
     <label for="vet_id">Assign Vet</label>
-    <select name="vet_id">
+    <select name="vet_id" required>
       <% for vet in vets %>
       <option value="<%=vet.id %>"><%=vet.name %></option>
       <% end %>

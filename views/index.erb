@@ -1,1 +1,13 @@
 <h2>Hello and welcome to Rex for vets</h2>
+
+<% for pet in @pets%>
+<p>Animal name: <%= pet.random_name() %></p>
+<p>Age: <%= pet.age %></p>
+<p>Type: <%= pet.animal_type() %></p>
+<p>Owner name: <%= pet.full_name() %></p>
+<p>Owner number: <%= pet.owner_contact_number %></p>
+<p>Treatment notes: <%= pet.treatment_notes %></p>
+<p>Vet assigned: <%= pet.vet().name %></p>
+<p><a href="/pets/<%= pet.id %>">Show Entry</a></p>
+<hr />
+<% end %>

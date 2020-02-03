@@ -15,7 +15,7 @@ class Pet
     @owner_last_name = options['owner_last_name']
     @owner_contact_number = options['owner_contact_number']
     @treatment_notes = options['treatment_notes']
-    @vet_id = options['vet_id']
+    @vet_id = options['vet_id'].to_i
   end
 
  #CREATE
@@ -61,6 +61,13 @@ def update()
   @owner_contact_number, @treatment_notes, @vet_id, @id]
   SqlRunner.run(sql, values)
 end
+
+# DELETE ALL FUNCTION
+def self.delete_all()
+  sql = "DELETE FROM pets"
+  SqlRunner.run(sql)
+end
+
 
 #DELETE
 def delete()
