@@ -4,7 +4,7 @@ class Pet
 
   attr_reader :id
   attr_accessor :pet_name, :age, :animal_type, :owner_first_name,
-  :owner_last_name, :owner_contact_number, :treatment_notes, :vet_id
+  :owner_last_name, :owner_contact_number, :treatment_notes, :vet_id, :cost #cost added in.
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -16,15 +16,16 @@ class Pet
     @owner_contact_number = options['owner_contact_number']
     @treatment_notes = options['treatment_notes']
     @vet_id = options['vet_id'].to_i
+    @cost = options['cost'].to_i #cost added in.
   end
 
  #CREATE
  def save()
    sql = "INSERT into pets(pet_name, age, animal_type, owner_first_name,
-   owner_last_name, owner_contact_number, treatment_notes, vet_id)
-   VALUES ($1,$2,$3,$4,$5,$6,$7,$8) RETURNING id"
+   owner_last_name, owner_contact_number, treatment_notes, vet_id, cost)
+   VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9) RETURNING id"
    values = [@pet_name, @age, @animal_type, @owner_first_name, @owner_last_name,
-   @owner_contact_number, @treatment_notes, @vet_id]
+   @owner_contact_number, @treatment_notes, @vet_id, @cost] #cost added here and extra $ added above.
    @id = SqlRunner.run(sql, values)[0]['id'].to_i
  end
 
@@ -34,8 +35,8 @@ class Pet
  end
 
 def full_name
-  return @owner_first_name + " " + @owner_last_name #edit to names on seperate lines if this causes issues later on.
-end                                                 #remember to also fix this on the pets.erb view.
+  return @owner_first_name + " " + @owner_last_name
+end
 
 #READ
 def self.all()
@@ -55,10 +56,10 @@ end
 #UPDATE
 def update()
   sql = "UPDATE pets SET(pet_name, age, animal_type, owner_first_name,
-  owner_last_name, owner_contact_number, treatment_notes, vet_id) =
-  ($1,$2,$3,$4,$5,$6,$7,$8) WHERE id = $9"
+  owner_last_name, owner_contact_number, treatment_notes, vet_id, cost) =
+  ($1,$2,$3,$4,$5,$6,$7,$8,$9) WHERE id = $10"
   values = [@pet_name, @age, @animal_type, @owner_first_name, @owner_last_name,
-  @owner_contact_number, @treatment_notes, @vet_id, @id]
+  @owner_contact_number, @treatment_notes, @vet_id, @cost, @id] #cost added in here and dollar values changed.
   SqlRunner.run(sql, values)
 end
 

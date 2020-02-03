@@ -3,24 +3,27 @@
 <form method="post"action="/pets/<%= @pet.id %>">
   <label for="pet-name">Pet Name:</label>
   <input id="pet-name" type="text" name="pet_name" value="<%= @pet.pet_name %>"/>
-
+<br>
   <label for="age">Age:</label>
   <input id="age" type="text" name="age" value="<%= @pet.age %>"/>
-
+<br>
   <label for="animal-type">Animal Type:</label>
   <input id="animal-type" type="text" name="animal_type" value="<%= @pet.animal_type %>"/>
-
+<br>
   <label for="owner-first-name">Owner First Name:</label>
   <input id="owner-first-name" type="text" name="owner_first_name" value="<%= @pet.owner_first_name %>"/>
-
+<br>
   <label for="owner-last-name">Owner Last Name:</label>
   <input id="owner-last-name" type="text" name="owner_last_name" value="<%= @pet.owner_last_name %>"/>
-
+<br>
   <label for="owner-contact-number">Owner Contact Number:</label>
   <input id="owner-contact-number" type="text" name="owner_contact_number" value="<%= @pet.owner_contact_number %>"/>
-
+<br>
   <label for="treatment-notes">Treatment Notes:</label>
   <input id="treatment-notes" type="text" name="treatment_notes" value="<%= @pet.treatment_notes %>"/>
+<br>
+<label for="cost">Cost: £</label>
+<input id="cost" type="text" name="cost" value="<%= @pet.cost %>"/>
 
   <label>Edit Vet:
       <select name="vet_id" >
@@ -33,7 +36,7 @@
         <% end %>
       </select>
     </label>
-
+<br>
     <input type="submit" value="Update Details">
 
 

@@ -51,7 +51,8 @@ charlie = Pet.new({
   'owner_last_name' => 'Grant',
   'owner_contact_number' => '07798579843',
   'treatment_notes' => 'Broken left femur',
-  'vet_id' => doctor1.id
+  'vet_id' => doctor1.id,
+  'cost' => 300
 
   });
 
@@ -65,7 +66,8 @@ charlie = Pet.new({
     'owner_last_name' => 'Williams',
     'owner_contact_number' => '07703429102',
     'treatment_notes' => 'Giant Hairball',
-    'vet_id' => doctor2.id
+    'vet_id' => doctor2.id,
+    'cost' => 100
 
     });
 
@@ -79,7 +81,8 @@ charlie = Pet.new({
       'owner_last_name' => 'Stevens',
       'owner_contact_number' => '07896429861',
       'treatment_notes' => 'Not so bushy tail',
-      'vet_id' => doctor3.id
+      'vet_id' => doctor3.id,
+      'cost' => 250
 
       });
 
@@ -93,7 +96,8 @@ charlie = Pet.new({
       'owner_last_name' => 'Miller',
       'owner_contact_number' => '07814556897',
       'treatment_notes' => 'Tounge stuck out',
-      'vet_id' => doctor4.id
+      'vet_id' => doctor4.id,
+      'cost' => 450
 
       });
 

@@ -6,6 +6,7 @@
 <p>Owner Last Name: <%=@pet.owner_last_name %> </p>
 <p>Owner Number: <%=@pet.owner_contact_number %> </p>
 <p>Treatment Notes: <%=@pet.treatment_notes %> </p>
+<p>Cost £: <%=@pet.cost %> </p>
 <p>Vet assigned: <%=@pet.vet().name %></p>
 
 <form method='post' action="/pets/<%=@pet.id%>/delete">
