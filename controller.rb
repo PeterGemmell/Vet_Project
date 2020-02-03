@@ -43,13 +43,13 @@ end
 
 get '/pets/:id/edit' do
   pet_id = params[:id]
-  @pet = Pet.id(pet_id)
+  @pet = Pet.find_by_id(pet_id)
   erb(:edit)
 end
 
 post '/pets/:id/delete' do
   pet_id = params[:id]
-  @pet = Pet.id(pet_id)
+  @pet = Pet.find_by_id(pet_id) #back to just id.
   @pet.delete
   erb(:delete)
 end
