@@ -36,7 +36,7 @@ top: 90px;
   margin-right: 95px;
   position: relative;
   font-weight: bold;
-  top: 110px;
+  top: 50px;
 }
 
 
@@ -47,7 +47,8 @@ top: 90px;
   margin-right: 95px;
   position: relative;
   font-weight: normal;
-  top: 130px;
+  top: 15px;
+  font-size: 15px;
 }
 
 .main-pet {
