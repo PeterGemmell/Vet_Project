@@ -1,0 +1,88 @@
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+
+.practising-vetstitle {
+  text-align: center;
+  text-decoration: underline;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  font-weight: bold;
+  top: 130px;
+}
+
+
+
+.practising-vets {
+  text-align: center;
+  text-decoration: underline;
+  margin-left: 5px;
+  margin-right: 95px;
+  position: relative;
+  font-weight: normal;
+  top: 130px;
+}
+
+.main-pet {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 6%;
+  position: relative;
+  top: 220px;
+}
+
+.welcome-text {
+  text-align: center;
+  text-decoration: underline;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  font-weight: bold;
+  top: 130px;
+}
+
+.second-text {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  font-weight: normal;
+  top: 150px;
+}
+
+.last-text {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  font-weight: normal;
+  top: 150px;
+}
+
+
+html {
+  font-family: 'Montserrat', Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #F2F3EB;
+}
+
+
+h2 {
+  text-decoration: underline;
+}
+
+
+li {
+  display: inline-table;
+  margin-left: 116px;
+  margin-right: 116px;
+  font-size: 15px;
+  font-weight: 100;
+  color: black;
