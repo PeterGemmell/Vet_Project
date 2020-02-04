@@ -1,3 +1,4 @@
+
 <div class="practising-vetstitle">
 <h2>Practising Vets</h2>
 </div>
@@ -9,6 +10,14 @@
   <% for vet in @vets %>
   <br>
    <li><%= vet.name %></li>
+   <form method='post' action="/vets/<%=vet.id%>/delete">
+    <label for="delete-entry">Delete Vet:</label>
+    <input id="delete" type="submit" name="delete" value="Delete Vet">
+  </form>
+
+   <form class="" action="index.html" method="post">
+
+  </form>
    <br>
   <% end %>
 </ul>

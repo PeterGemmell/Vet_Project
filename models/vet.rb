@@ -19,6 +19,10 @@ def save()
   @id = SqlRunner.run(sql, values)[0]['id'].to_i
 end
 
+def random_vet_name
+  return @name
+end 
+
 #READ
 def self.all()
   sql = "SELECT * FROM vets"
@@ -44,7 +48,7 @@ end
 def self.delete_all()
   sql = "DELETE FROM vets"
   SqlRunner.run(sql)
-end 
+end
 
 
 #DELETE

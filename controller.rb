@@ -64,3 +64,10 @@ post '/pets/:id' do
   pet.update
   redirect to '/pets'
 end
+
+post '/vets/:id/delete' do
+  vet_id = params[:id]
+  @vet = Vet.find_by_id(vet_id)
+  @vet.delete
+  erb(:deletevet)
+end
