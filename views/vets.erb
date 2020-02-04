@@ -9,7 +9,11 @@
 <ul>
   <% for vet in @vets %>
   <br>
+  <div class="vet-names">
+
    <li><%= vet.name %></li>
+   <br>
+   </div>
    <form method='get' action="/vets/<%=vet.id%>/editvet">
     <label for="edit-entry">Edit Vet:</label>
     <input id="edit" type="submit" name="edit" value="Edit Vet">
