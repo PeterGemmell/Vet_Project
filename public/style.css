@@ -6,8 +6,8 @@
 .practising-vetstitle {
   text-align: center;
   text-decoration: underline;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 5px;
+  margin-right: 95px;
   position: relative;
   font-weight: bold;
   top: 130px;
@@ -17,7 +17,7 @@
 
 .practising-vets {
   text-align: center;
-  text-decoration: underline;
+  text-decoration: none;
   margin-left: 5px;
   margin-right: 95px;
   position: relative;
