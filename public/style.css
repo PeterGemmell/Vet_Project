@@ -2,6 +2,10 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 
+.main-vet {
+  text-align: center;
+}
+
 .bookedpets-title {
   text-align: center;
 }
@@ -36,7 +40,7 @@ top: 90px;
   margin-right: 95px;
   position: relative;
   font-weight: bold;
-  top: 50px;
+  top: 45px;
 }
 
 
