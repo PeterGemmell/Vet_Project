@@ -65,9 +65,34 @@ post '/pets/:id' do
   redirect to '/pets'
 end
 
+#VET TO EDIT
+get '/vets/:id/editvet' do
+  vet_id = params[:id]
+  @vet = Vet.find_by_id(vet_id)
+  erb(:editvet)
+end
+
 post '/vets/:id/delete' do
   vet_id = params[:id]
   @vet = Vet.find_by_id(vet_id)
   @vet.delete
   erb(:deletevet)
+end
+
+# ADDING A VET
+get '/vets/addvet' do
+  erb(:addvet)
+end
+
+#UPDATING A VET
+post '/vets/:id' do
+  vet = Vet.new(params)
+  vet.update
+  redirect to '/vets'
+end
+
+post '/vets' do
+  @vet = Vet.new(params)
+  @vet.save()
+  erb(:createdvet)
 end

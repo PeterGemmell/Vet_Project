@@ -1,0 +1,7 @@
+<p>Please Update Vet Name</p>
+<form method="post"action="/vets/<%= @vet.id %>">
+  <label for="name">Name:</label>
+  <input id="name" type="text" name="name" value="<%= @vet.name %>"/>
+
+  <input type="submit" value="Update Details">
+</form>
