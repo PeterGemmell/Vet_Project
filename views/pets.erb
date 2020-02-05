@@ -13,7 +13,11 @@
 <p>Owner number: <%= pet.owner_contact_number %></p>
 <p>Treatment notes: <%= pet.treatment_notes %></p>
 <p>Cost £: <%= pet.cost %></p>
-<p>Vet assigned: <%= pet.vet().name %></p>
+<% if pet.vet_id != 0 %>
+  <p>Vet assigned: <%= pet.vet().name %></p>
+<% else %>
+  <p><b>No Vet Assigned</b></p>
+<% end %>
 <p><a href="/pets/<%= pet.id %>">Show Entry</a></p>
 <br>
 <% end %>

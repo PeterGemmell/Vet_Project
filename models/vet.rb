@@ -6,9 +6,9 @@ class Vet
   attr_accessor :name, :url
 
   def initialize(options)
-    @id = options['id'].to_i if options ['id']
-    @name = options['name']
-    @url = options['url']
+    @id = options['id'].to_i if options['id']
+    @name = options['name'] if options['name']
+    @url = options['url'] if options['url']
   end
 
 #CREATE
@@ -21,7 +21,7 @@ end
 
 def random_vet_name
   return @name
-end 
+end
 
 #READ
 def self.all()

@@ -2,6 +2,16 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 
+.vetname-title {
+  text-align: center;
+  text-decoration: underline;
+  margin-left: 35px;
+  margin-right: 95px;
+  position: relative;
+  font-weight: bold;
+  top: 45px;
+}
+
 
 .newpetsystem {
   text-align: center;
@@ -84,6 +94,7 @@ top: 90px;
   margin-right: 95px;
   position: relative;
   font-weight: bold;
+  width: 20%;
   top: 130px;
 }
 

@@ -7,8 +7,11 @@
 <p>Owner Number: <%=@pet.owner_contact_number %> </p>
 <p>Treatment Notes: <%=@pet.treatment_notes %> </p>
 <p>Cost £: <%=@pet.cost %> </p>
-<p>Vet assigned: <%=@pet.vet().name %></p>
-
+<% if @pet.vet_id != 0 %>
+  <p>Vet assigned: <%= @pet.vet().name %></p>
+<% else %>
+  <p><b>No Vet Assigned</b></p>
+<% end %>
 <form method='post' action="/pets/<%=@pet.id%>/delete">
   <label for="delete-entry">Delete Entry:</label>
   <input id="delete" type="submit" name="delete" value="Delete Entry">

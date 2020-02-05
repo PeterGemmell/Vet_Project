@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require('pry')
 
 class Pet
 
@@ -82,9 +83,14 @@ end
 # booked in pets in pets.erb
 
 def vet()
+  # binding.pry()
+  if @vet_id == 0
+    return Vet.new({"name": "nil", "url": "nil"})
+  end
   sql = "SELECT * FROM vets WHERE id = $1"
   values = [@vet_id]
-  vet = SqlRunner.run(sql, values)[0]
+  vet = SqlRunner.run(sql, values).first
+
   return Vet.new(vet)
 end
 
