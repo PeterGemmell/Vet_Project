@@ -13,11 +13,11 @@
 .vetname-title {
   text-align: center;
   text-decoration: underline;
-  margin-left: 35px;
+  margin-left: 45px;
   margin-right: 95px;
   position: relative;
   font-weight: bold;
-  top: 45px;
+  top: 90px;
 }
 
 
@@ -97,8 +97,7 @@ top: 90px;
 
 .add-vet {
   text-align: center;
-  text-decoration: underline;
-  margin-left: 5px;
+  margin-left: 545px;
   margin-right: 95px;
   position: relative;
   font-weight: bold;
