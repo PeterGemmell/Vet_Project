@@ -82,15 +82,17 @@ end
 # VET function created allowing us to reference and assign the choosen vet name to currently
 # booked in pets in pets.erb
 
+# Created an if statement whereby if there is no vet to assign to a pet,
+# it creates a generic vet which will assign it to the pet, thus not deleting the pet.
+# This is titled No Vet Assigned in pets.erb and show.erb.
+
 def vet()
-  # binding.pry()
   if @vet_id == 0
     return Vet.new({"name": "nil", "url": "nil"})
   end
   sql = "SELECT * FROM vets WHERE id = $1"
   values = [@vet_id]
   vet = SqlRunner.run(sql, values).first
-
   return Vet.new(vet)
 end
 

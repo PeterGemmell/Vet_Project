@@ -2,6 +2,14 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 
+.showpage-detail {
+  text-align: center;
+  font-size: 15px;
+  top: 130px;
+  position: relative;
+}
+
+
 .vetname-title {
   text-align: center;
   text-decoration: underline;
