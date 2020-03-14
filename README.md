@@ -1,5 +1,5 @@
 # Vet_project
-Solo Project
+Vet management app, designed as part of the CodeClan Professional Software Development Course.
 
 Individual project-vet practise management system
 to launch:
